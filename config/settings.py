@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'main',
     'review',
     'django_filters',
+    'order',
 ]
 
 MIDDLEWARE = [
