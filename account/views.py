@@ -3,10 +3,10 @@ from django.shortcuts import get_object_or_404, redirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import ModelViewSet
 from drf_yasg.utils import swagger_auto_schema
 
-
-from .serializers import RegisterUserSerializer, BillingSerializer
+from .serializers import RegisterUserSerializer, BillingSerializer, ProfileSerializer
 from .models import User
 
 
@@ -45,3 +45,7 @@ class TopUpBillingView(APIView):
             return Response(status=200)
         return Response("invalid amount", status=400)
 
+
+class ProfileViewSet(ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = ProfileSerializer
