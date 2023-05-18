@@ -9,4 +9,4 @@ django-filter
 drf-writable-nested
 redis
 celery
-
+django-celery-beat

@@ -4,4 +4,6 @@ __pycache__/
 .idea/
 static/
 media/
+celerybeat-schedule.db
+
 
